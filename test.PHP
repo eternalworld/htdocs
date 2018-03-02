@@ -1,32 +1,16 @@
-﻿<!DOCTYPE html> 
-<html> 
-<body> 
-
 <?php
-$conn = mysqli_connect("120.119.72.53:8609","root","123456");
+require_once 'sqlfunction.php';
+$sql = new SQLFunction();
 
-if (!$conn){
-  die("Could not connect: " . mysqli_connect_error($conn));
-}
+//array(ID,Light 0 ~ 7)
+$data = array(20,1,1,1,1,1,1,1,1);
+//echo $sql->insert('led',20);
+echo json_encode($sql->select('led','*'),true);
 
-echo "connect successfully";
+//var_dump($sql->select());
+//print_r($sql->select('led','*')); 
 
-		
-$sql = "SELECT ID, light1, light2, light3, light4, light5, light6, light7, light8 FROM led";
-$result = mysqli_query($conn, $sql);
 
-if (mysql_num_rows($result) > 0)
-{
-	while($row = mysqli_fetch_assoc($result))
-	{
-		echo "ID". $row["id"]. " - Name: " . $row["light1"]. " " . $row["light2"]. "<br>";
-	}
-} 
-else{
-echo "0 結果";}
 
-mysqli_close($conn);
+
 ?>
-
-</body> 
-</html>
