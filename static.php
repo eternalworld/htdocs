@@ -1,15 +1,24 @@
 ﻿
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
   <title>get select value</title>
 </head>
 
 <body>
- 
+
+	<div class = "container">
+		<div class ="text-center">
+			
 <select name="number" id="number" onchange="print_value();">
 <option value="">請選取</option>
 </select>
  
+		</div>
+	</div>
  
 <!-- 印出結果 -->
 <div id="result">
@@ -36,6 +45,10 @@
     }
   });
   
+  
+
+	
+  
  function print_value() {
 	<!-- 將 select 的值在印出 -->
 	var num = document.getElementById("number").value;
@@ -43,9 +56,9 @@
 	$("#result").append("<tr>");
 	for(i=1;i<=8;i++){
 		if(res[num][i]=="1"){
-			$("#result").append('<img src="https://tse2.mm.bing.net/th?id=OIP.R7ebTKLI1dEK5uWLzHxJrwHaHa&amp" width="100" height="100" />');
+			$("#result").append('<img src="https://tse2.mm.bing.net/th?id=OIP.R7ebTKLI1dEK5uWLzHxJrwHaHa&amp" width="105" height="100"/>');
 		}else{
-			$("#result").append('<img src="https://tse2.mm.bing.net/th?id=OIP.wtAXd9C6IMtdzCGQMcT89QHaHa&amp" width="100" height="100" />');
+			$("#result").append('<img src="https://tse2.mm.bing.net/th?id=OIP.wtAXd9C6IMtdzCGQMcT89QHaHa&amp" width="105" height="105"/>');
 		}
 	}
 	$("#result").append("</tr>");
