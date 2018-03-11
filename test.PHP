@@ -1,5 +1,5 @@
 <?php
-require_once 'sqlfunction.php';
+require_once '2.php';
 $sql = new SQLFunction();
 
 //array(ID,Light 0 ~ 7)
