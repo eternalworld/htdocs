@@ -249,7 +249,9 @@
 						$("#result").hide();
 					}
 					if(resSlave[2] == "0"){
-						$("#program").html('Program：No Work');
+						$("#slave").html('Slave：No Work');
+						$("#program").html('Program：');
+						$("#delay").html('Delay：');
 						$("#result").html('');
 						$("#result").hide();
 					}		
